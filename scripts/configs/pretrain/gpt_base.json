@@ -1,5 +1,6 @@
 {
     "model_path": "checkpoints/smiles-gpt-base/",
+    "neptune_project":"architvasan/DPO-molecules",
     "seq_len": 64,
     "model_type": "gpt-small",
     "aug_prob": 0.0,

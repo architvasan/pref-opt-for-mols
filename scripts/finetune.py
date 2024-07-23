@@ -9,7 +9,7 @@ from sklearn.model_selection import train_test_split
 from neptune_pytorch import NeptuneLogger
 from pref_opt_for_mols.models import GPT, CharRNN, DPO
 from pref_opt_for_mols.dataset import PreferencePairDataset
-
+import intel_extension_for_pytorch as ipex
 
 parser = argparse.ArgumentParser()
 parser.add_argument(
@@ -103,7 +103,7 @@ if __name__ == "__main__":
 
     if args.seed is not None:
         torch.manual_seed(args.seed)
-        torch.cuda.manual_seed_all(args.seed)
+        #torch.cuda.manual_seed_all(args.seed)
         np.random.seed(args.seed)
 
     with open(args.config) as fp:

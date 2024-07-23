@@ -2,13 +2,15 @@ import argparse
 import pandas as pd
 from pref_opt_for_mols.models import GPTLightning, CharRNNLightning
 from pref_opt_for_mols.dataset import NextTokenSmilesDataset
-import pytorch_lightning as pl
-from pytorch_lightning.callbacks import ModelCheckpoint
+#import pytorch_lightning as pl
+from lightning.pytorch.callbacks import ModelCheckpoint
+#from pytorch_lightning.callbacks import ModelCheckpoint
 from torch.utils.data.dataloader import DataLoader
 import torch
 import json
 import os
-
+import intel_extension_for_pytorch as ipex
+import lightning as L
 parser = argparse.ArgumentParser()
 parser.add_argument(
     "--arch",
@@ -31,17 +33,18 @@ args = parser.parse_args()
 
 
 def train(model, config, train_loader, test_loader=None):
-    if config.get("neptune_project"):
-        logger = pl.loggers.NeptuneLogger(
-            project=config.get("neptune_project"),
-            api_token=os.environ.get("NEPTUNE_API_KEY"),
-        )
-    else:
-        logger = None
+    if True:
+        if config.get("neptune_project"):
+            logger = L.pytorch.loggers.NeptuneLogger(
+                project=config.get("neptune_project"),
+                api_token=os.environ.get("NEPTUNE_API_KEY"),
+            )
+        else:
+            logger = None
 
-    # log configs
-    for key, value in config.items():
-        logger.experiment[f"config/{key}"].log(value)
+        # log configs
+        for key, value in config.items():
+            logger.experiment[f"config/{key}"].log(value)
 
     checkpoint_callback = ModelCheckpoint(
         dirpath=config.get("model_path"),
@@ -55,12 +58,27 @@ def train(model, config, train_loader, test_loader=None):
         mode="min",
     )
 
+    if True:#args.run.compute_mode == ComputeMode.XPU:
+        from lightning.fabric.accelerators import XPUAccelerator
+        accelerator = XPUAccelerator()
+    #elif args.run.compute_mode == ComputeMode.CUDA:
+    #    from lightning.fabric.accelerators import CUDAAccelerator
+    #    accelerator = CUDAAccelerator()
+    #else:
+    #    from lightning.fabric.accelerators import CPUAccelerator
+    #    accelerator = CPUAccelerator()
+
+
+
+
+
+
     # create trainer
-    trainer = pl.Trainer(
-        accelerator="gpu",
+    trainer = L.pytorch.Trainer(
+        accelerator='xpu',#XPUAccelerator(),#accelerator,
         devices=[args.device],
         max_epochs=config.get("max_epochs", 10),
-        logger=logger,
+        #logger=logger,
         default_root_dir=config.get("model_path"),
         log_every_n_steps=10,
         callbacks=[checkpoint_callback, checkpoint_callback_best],
@@ -68,7 +86,7 @@ def train(model, config, train_loader, test_loader=None):
     )
 
     trainer.fit(model, train_loader, test_loader)
-    return model, logger
+    return model#, logger
 
 
 def load_moses(split="train"):

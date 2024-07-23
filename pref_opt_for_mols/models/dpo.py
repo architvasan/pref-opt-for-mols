@@ -50,7 +50,7 @@ class DPO:
         reference,
         policy,
         config,
-        device="cuda:0",
+        device="xpu:0",
         logger=None,
         run=None,
     ):

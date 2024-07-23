@@ -4,6 +4,7 @@ from pref_opt_for_mols.models import GPT, CharRNN
 import torch
 import json
 import os
+import intel_extension_for_pytorch as ipex
 
 parser = argparse.ArgumentParser()
 parser.add_argument(
@@ -62,7 +63,7 @@ if __name__ == "__main__":
     else:
         raise ValueError(f"Unrecognized model {args.arch}")
 
-    device = torch.device(f"cuda:{args.device}")
+    device = torch.device(f"xpu:{args.device}")
     model.to(device)
 
     sampled_smiles = []

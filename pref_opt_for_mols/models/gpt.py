@@ -12,6 +12,7 @@ import torch.nn as nn
 from torch.nn import functional as F
 import pytorch_lightning as pl
 from ..dataset import SmilesTokenizer
+import lightning as L
 
 
 # -----------------------------------------------------------------------------
@@ -243,7 +244,9 @@ class GPT(nn.Module):
 
         obj = cls(config)
         if isinstance(device, int):
-            device = torch.device(f"cuda:{device}")
+            #device = torch.device(f"cuda:{device}")
+            device = torch.device(f"xpu:{device}")
+
         elif isinstance(device, str):
             device = torch.device(device)
         
@@ -382,7 +385,7 @@ class GPT(nn.Module):
             json.dump(self.config, f, indent=4)
 
 
-class GPTLightning(pl.LightningModule):
+class GPTLightning(L.LightningModule):
     """GPT Language Model
 
     Config is dict with options:

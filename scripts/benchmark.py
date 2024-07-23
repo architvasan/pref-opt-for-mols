@@ -7,6 +7,7 @@ from functools import partial
 import matplotlib.pyplot as plt
 from pref_opt_for_mols.metrics import internal_diversity, frac_unique, frac_valid, fcd_score
 from pref_opt_for_mols.filter import filter_mcf
+import intel_extension_for_pytorch as ipex
 
 parser = argparse.ArgumentParser()
 parser.add_argument(
@@ -72,7 +73,7 @@ if __name__ == "__main__":
         metrics["fcd_score"] = partial(
             fcd_score,
             ref_smiles=pd.read_csv(args.ref_smiles)["smiles"].tolist(),
-            device=f"cuda:{args.device}",
+            device=f"xpu:{args.device}",
             n_workers=16
         )
     else:
