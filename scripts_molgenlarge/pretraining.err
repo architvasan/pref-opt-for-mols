@@ -1,0 +1,883 @@
+Error.  nthreads cannot be larger than environment variable "NUMEXPR_MAX_THREADS" (64)GPU available: True (xpu), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+2024-07-23 17:09:28.784417: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-07-23 17:09:28.787604: I external/local_tsl/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2024-07-23 17:09:28.821722: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-07-23 17:09:28.821742: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-07-23 17:09:28.823061: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-07-23 17:09:28.830204: I external/local_tsl/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2024-07-23 17:09:28.830388: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 AVX_VNNI AMX_TILE AMX_INT8 AMX_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-23 17:09:31.284371: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2024-07-23 17:09:33.587579: W external/local_tsl/tsl/lib/monitoring/collection_registry.cc:81] Trying to register 2 metrics with the same name: /tensorflow/core/bfc_allocator_delay. The old value will be erased in order to register a new one. Please check if you link the metric more than once, or if the name is already used by other metrics.
+2024-07-23 17:09:33.587838: W external/local_tsl/tsl/lib/monitoring/collection_registry.cc:81] Trying to register 2 metrics with the same name: /xla/service/gpu/compiled_programs_count. The old value will be erased in order to register a new one. Please check if you link the metric more than once, or if the name is already used by other metrics.
+2024-07-23 17:09:33.589845: W external/local_tsl/tsl/lib/monitoring/collection_registry.cc:81] Trying to register 2 metrics with the same name: /jax/pjrt/pjrt_executable_executions. The old value will be erased in order to register a new one. Please check if you link the metric more than once, or if the name is already used by other metrics.
+2024-07-23 17:09:33.589860: W external/local_tsl/tsl/lib/monitoring/collection_registry.cc:81] Trying to register 2 metrics with the same name: /jax/pjrt/pjrt_executable_execution_time_usecs. The old value will be erased in order to register a new one. Please check if you link the metric more than once, or if the name is already used by other metrics.
+2024-07-23 17:09:33.775976: I itex/core/wrapper/itex_gpu_wrapper.cc:38] Intel Extension for Tensorflow* GPU backend is loaded.
+2024-07-23 17:09:33.778372: I external/local_xla/xla/pjrt/pjrt_api.cc:67] PJRT_Api is set for device type xpu
+2024-07-23 17:09:33.778389: I external/local_xla/xla/pjrt/pjrt_api.cc:72] PJRT plugin for XPU has PJRT API version 0.33. The framework PJRT API version is 0.34.
+2024-07-23 17:09:33.801655: I external/intel_xla/xla/stream_executor/sycl/sycl_gpu_runtime.cc:134] Selected platform: Intel(R) Level-Zero
+2024-07-23 17:09:33.803242: I external/xla/xla/service/service.cc:168] XLA service 0x55a802961620 initialized for platform SYCL (this does not guarantee that XLA will be used). Devices:
+2024-07-23 17:09:33.803261: I external/xla/xla/service/service.cc:176]   StreamExecutor device (0): Intel(R) Data Center GPU Max 1550, <undefined>
+2024-07-23 17:09:33.803308: I external/xla/xla/service/service.cc:176]   StreamExecutor device (1): Intel(R) Data Center GPU Max 1550, <undefined>
+2024-07-23 17:09:33.803716: I itex/core/devices/gpu/itex_gpu_runtime.cc:130] Selected platform: Intel(R) Level-Zero
+2024-07-23 17:09:33.804727: I external/intel_xla/xla/pjrt/se_xpu_pjrt_client.cc:97] Using BFC allocator.
+2024-07-23 17:09:33.804746: I external/xla/xla/pjrt/gpu/gpu_helpers.cc:106] XLA backend allocating 61847529062 bytes on device 0 for BFCAllocator.
+2024-07-23 17:09:33.804775: I external/xla/xla/pjrt/gpu/gpu_helpers.cc:106] XLA backend allocating 61847529062 bytes on device 1 for BFCAllocator.
+2024-07-23 17:09:33.817648: I external/local_xla/xla/pjrt/pjrt_c_api_client.cc:119] PjRtCApiClient created.
+/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/site-packages/lightning/pytorch/callbacks/model_checkpoint.py:652: Checkpoint directory /lus/gila/projects/candle_aesp_CNDA/avasan/RL_Workflows/RL_DPO/pref-opt-for-mols/scripts/checkpoints/smiles-gpt-base exists and is not empty.
+
+  | Name | Type | Params | Mode 
+--------------------------------------
+0 | gpt  | GPT  | 6.4 M  | train
+--------------------------------------
+6.4 M     Trainable params
+0         Non-trainable params
+6.4 M     Total params
+25.401    Total estimated model params size (MB)
+Process ForkProcess-62:
+Process ForkProcess-59:
+Process ForkProcess-52:
+Process ForkProcess-38:
+Process ForkProcess-48:
+Process ForkProcess-60:
+Process ForkProcess-56:
+Process ForkProcess-61:
+Process ForkProcess-49:
+Process ForkProcess-46:
+Process ForkProcess-64:
+Process ForkProcess-43:
+Process ForkProcess-30:
+Process ForkProcess-44:
+Process ForkProcess-47:
+Process ForkProcess-2:
+Process ForkProcess-57:
+Process ForkProcess-24:
+Process ForkProcess-34:
+Process ForkProcess-45:
+Process ForkProcess-39:
+Process ForkProcess-31:
+Process ForkProcess-42:
+Process ForkProcess-20:
+Process ForkProcess-41:
+Process ForkProcess-17:
+Process ForkProcess-53:
+Process ForkProcess-12:
+Process ForkProcess-11:
+Process ForkProcess-16:
+Process ForkProcess-58:
+Process ForkProcess-26:
+Process ForkProcess-40:
+Process ForkProcess-33:
+Process ForkProcess-10:
+Process ForkProcess-63:
+Process ForkProcess-29:
+Process ForkProcess-23:
+Process ForkProcess-32:
+Process ForkProcess-50:
+Process ForkProcess-15:
+Process ForkProcess-6:
+Process ForkProcess-35:
+Process ForkProcess-28:
+Process ForkProcess-5:
+Process ForkProcess-37:
+Process ForkProcess-22:
+Process ForkProcess-1:
+Process ForkProcess-51:
+Process ForkProcess-7:
+Process ForkProcess-8:
+Process ForkProcess-27:
+Process ForkProcess-3:
+Process ForkProcess-9:
+Process ForkProcess-14:
+Process ForkProcess-21:
+Process ForkProcess-19:
+Process ForkProcess-4:
+Process ForkProcess-18:
+Process ForkProcess-55:
+Process ForkProcess-54:
+Traceback (most recent call last):
+Traceback (most recent call last):
+Process ForkProcess-25:
+Process ForkProcess-13:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+Traceback (most recent call last):
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+Traceback (most recent call last):
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+KeyboardInterrupt
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+Traceback (most recent call last):
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+KeyboardInterrupt
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+KeyboardInterrupt
+Traceback (most recent call last):
+KeyboardInterrupt
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+Traceback (most recent call last):
+KeyboardInterrupt
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+Traceback (most recent call last):
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+Traceback (most recent call last):
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+KeyboardInterrupt
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+Process ForkProcess-36:
+Traceback (most recent call last):
+Traceback (most recent call last):
+KeyboardInterrupt
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+Traceback (most recent call last):
+KeyboardInterrupt
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+Traceback (most recent call last):
+KeyboardInterrupt
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+Traceback (most recent call last):
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+KeyboardInterrupt
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+Traceback (most recent call last):
+KeyboardInterrupt
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+KeyboardInterrupt
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+Traceback (most recent call last):
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+KeyboardInterrupt
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+KeyboardInterrupt
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+KeyboardInterrupt
+Traceback (most recent call last):
+KeyboardInterrupt
+Traceback (most recent call last):
+Traceback (most recent call last):
+KeyboardInterrupt
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+Traceback (most recent call last):
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+Traceback (most recent call last):
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+KeyboardInterrupt
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+Traceback (most recent call last):
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+KeyboardInterrupt
+KeyboardInterrupt
+KeyboardInterrupt
+KeyboardInterrupt
+KeyboardInterrupt
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+Traceback (most recent call last):
+KeyboardInterrupt
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+Traceback (most recent call last):
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 103, in get
+    res = self._recv_bytes()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/connection.py", line 216, in recv_bytes
+    buf = self._recv_bytes(maxlength)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/connection.py", line 414, in _recv_bytes
+    buf = self._recv(4)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+KeyboardInterrupt
+KeyboardInterrupt
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+KeyboardInterrupt
+Traceback (most recent call last):
+Traceback (most recent call last):
+KeyboardInterrupt
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+Traceback (most recent call last):
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+KeyboardInterrupt
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+KeyboardInterrupt
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+KeyboardInterrupt
+KeyboardInterrupt
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+Traceback (most recent call last):
+Traceback (most recent call last):
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+Traceback (most recent call last):
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+KeyboardInterrupt
+KeyboardInterrupt
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+Traceback (most recent call last):
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+Traceback (most recent call last):
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+KeyboardInterrupt
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+KeyboardInterrupt
+KeyboardInterrupt
+KeyboardInterrupt
+Traceback (most recent call last):
+KeyboardInterrupt
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+Traceback (most recent call last):
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+Traceback (most recent call last):
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+Traceback (most recent call last):
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+Traceback (most recent call last):
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+KeyboardInterrupt
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+KeyboardInterrupt
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+Traceback (most recent call last):
+KeyboardInterrupt
+KeyboardInterrupt
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+Traceback (most recent call last):
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+Traceback (most recent call last):
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 103, in get
+    res = self._recv_bytes()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/connection.py", line 216, in recv_bytes
+    buf = self._recv_bytes(maxlength)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/connection.py", line 414, in _recv_bytes
+    buf = self._recv(4)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+KeyboardInterrupt
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+KeyboardInterrupt
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+KeyboardInterrupt
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/concurrent/futures/process.py", line 240, in _process_worker
+    call_item = call_queue.get(block=True)
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+KeyboardInterrupt
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+KeyboardInterrupt
+KeyboardInterrupt
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/queues.py", line 102, in get
+    with self._rlock:
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+KeyboardInterrupt
+KeyboardInterrupt
+KeyboardInterrupt
+KeyboardInterrupt
+KeyboardInterrupt
+/lus/gila/projects/candle_aesp_CNDA/avasan/envs/rl_dpo/lib/python3.9/site-packages/lightning/pytorch/trainer/call.py:54: Detected KeyboardInterrupt, attempting graceful shutdown...
+Traceback (most recent call last):
+  File "/lus/gila/projects/candle_aesp_CNDA/avasan/RL_Workflows/RL_DPO/pref-opt-for-mols/scripts/pretrain.py", line 153, in <module>
+    model, logger = train(model, config, train_loader, test_loader)
+TypeError: cannot unpack non-iterable GPTLightning object

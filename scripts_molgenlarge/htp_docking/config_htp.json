@@ -1,0 +1,17 @@
+{
+"smiles_input": "../input/Training.smi",
+"data_pwd": "/lustre/orion/chm155/proj-shared/avasan/InferenceData",
+"dataset": "ZIN",
+"sample_size": 1000000,
+"recep_file": "../input/rec_4ui5.oedu",
+"max_confs": 10,
+"batch_size": 250,
+"pose_gen": false,
+"score_pattern": "scores/4ui5_scores",
+"score_cutoff": 10,
+"temp_dir": "lig_confs",
+"output_traj": "output_combined_trajectories",
+"protein_pdb": "prot.pdb",
+"score_output": "scores",
+"train_out": "trainoutput"
+}
